@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from .models import Meeting, Recording
+from .serializer import MeetingSerializer, RecordingSerializer
 
-# Create your views here.
+class MeetingViewSet(ModelViewSet):
+    queryset = Meeting.objects.all()
+    serializer_class = MeetingSerializer
+
+class RecordingViewSet(ModelViewSet):
+    queryset = Recording.objects.all()
+    serializer_class = RecordingSerializer
