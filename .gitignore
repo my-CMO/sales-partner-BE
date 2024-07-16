@@ -135,3 +135,6 @@ celerybeat-schedule
 # Environments
 local_settings.py
 .env
+
+#recordingFiles
+Media/
